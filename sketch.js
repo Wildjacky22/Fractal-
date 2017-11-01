@@ -2,8 +2,6 @@ function setup(){
   
   createCanvas( windowWidth , windowHeight );
  
-//  slider =  createSlider(0, TWO_PI , PI/4 );
- 
 }
 
 function draw(){
