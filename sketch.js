@@ -1,27 +1,42 @@
-function setup() {
+function setup(){
+  
   createCanvas( windowWidth , windowHeight );
-
-  noStroke();
-  
-  background( 0 , 0 , 0 )
+ 
+//  slider =  createSlider(0, TWO_PI , PI/4 );
+ 
 }
-function draw() {
 
-  var r = random( 0 , 35 );
-  var g = random( 0 , 150 );
-  var b = random( 0 , 255 );
-  var a = random( 0 , 100 );
+function draw(){
+  
+  background( 0 , 0 , 0 );
+  
+  a = (mouseX*0.002);
+  
+  var len = 200;
+  
+  stroke(255);
+  translate( windowWidth*0.5 , height );
+  branch(200);
+}
 
-  fill( r , g , b , 2 ); 
-  ellipse( mouseX , mouseY , 20 , 20 );
+function branch(len){
   
-  fill( r , g , b , a );
-  ellipse( mouseX , mouseY , 30 , 30 );
+  line( 0 , 0 , 0 , -len);
   
-  fill( r , g , b , a );
-  ellipse( mouseX , mouseY , 40 , 40);
-   
-  fill( r , g , b , a );
-  ellipse( mouseX , mouseY , 50 , 50);
-   
+  translate( 0 , -len );
+  
+
+  
+  if( len>3){
+  push();
+  rotate(a);
+  branch( len*0.55 );
+  pop();
+  
+  push();
+  rotate(-a);
+  branch( len*0.55 );
+  pop();
+  
+  }
 }
