@@ -13,14 +13,14 @@ function draw(){
   var g = random( 0 , 255 );
   var b = random( 0 , 255 );
   
-  frameRate(1);
+  frameRate(40);
   a = (mouseX*0.002);
     //random( PI/0.01 , PI);
   //(mouseX*0.002);
   
   var len = 200;
   
-  stroke(r,g,b,155);
+  stroke(255,255,255,155);
   translate( windowWidth*0.5 , height );
   branch(200);
 }
