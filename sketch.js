@@ -14,7 +14,8 @@ function draw(){
   var b = random( 0 , 255 );
   
   frameRate(1);
-  a = random( PI/0.01 , PI);
+  a = (mouseX*0.002);
+    //random( PI/0.01 , PI);
   //(mouseX*0.002);
   
   var len = 200;
